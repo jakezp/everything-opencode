@@ -1,6 +1,6 @@
 {
   "name": "everything-opencode",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Complete OpenCode configuration - agents, skills, hooks, commands, rules. Battle-tested patterns from everything-claude-code adapted for OpenCode.",
   "type": "module",
   "main": "dist/index.js",
