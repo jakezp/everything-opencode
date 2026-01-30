@@ -1,6 +1,6 @@
 {
   "name": "everything-opencode",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Complete OpenCode configuration - agents, skills, hooks, commands, rules. Battle-tested patterns from everything-claude-code adapted for OpenCode.",
   "type": "module",
   "main": "dist/index.js",
@@ -8,7 +8,14 @@
   "bin": {
     "everything-opencode": "./dist/cli/index.js"
   },
-  "files": ["dist", "agents", "commands", "skills", "rules", "contexts"],
+  "files": [
+    "dist",
+    "agents",
+    "commands",
+    "skills",
+    "rules",
+    "contexts"
+  ],
   "scripts": {
     "build": "bun build src/index.ts --outdir dist --target bun --format esm && bun build src/cli/index.ts --outdir dist/cli --target bun --format esm && tsc --emitDeclarationOnly",
     "typecheck": "tsc --noEmit",
