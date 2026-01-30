@@ -28,15 +28,23 @@ All agents with write access MUST validate code using LSP tools.
 3. Use lsp_find_references to verify refactoring safety
 ```
 
+## Explicit Acknowledgement
+
+Agents cannot just "fix" silently. You must:
+1. Run diagnostics.
+2. Output: "Running LSP check..."
+3. Output: "Found [N] errors. Fixing..." or "LSP Clean."
+
 ## Agent Responsibilities
 
 | Agent | LSP Requirement |
 |-------|-----------------|
+| fixer | MUST run diagnostics, ACK errors, and FIX immediately |
 | tdd-guide | MUST run diagnostics after implementation |
 | code-reviewer | MUST check diagnostics during review |
 | build-error-resolver | MUST use diagnostics to identify issues |
 | refactor-cleaner | MUST check references before removal |
-| orchestrator | MUST verify no errors after delegated work |
+| orchestrator | MUST verify sub-agent LSP status (Gatekeeper) |
 
 ## Quick Reference
 

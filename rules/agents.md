@@ -62,8 +62,8 @@ Use slash commands for explicit control:
 
 | User Request | Agents Invoked |
 |--------------|----------------|
-| "Build/Create feature" | planner → architect? → tdd-guide → reviewers |
-| "Fix bug" | tdd-guide → code-reviewer |
+| "Build/Create feature" | planner → architect? → fixer → reviewers |
+| "Fix bug" | fixer → code-reviewer |
 | "Review my code" | code-reviewer + security-reviewer? |
 | "Build is broken" | build-error-resolver |
 | "Refactor/clean up" | planner → refactor-cleaner → code-reviewer |
@@ -90,8 +90,9 @@ First agent 1, then agent 2, then agent 3
 Handle these directly without delegation:
 - Simple questions about the codebase
 - Quick file reads or searches
-- Very small changes (< 10 lines)
 - Clarifying questions
+
+**NEVER write code directly.** Even for a one-line change, delegate to `fixer`.
 
 ## Agent Invocation Rules
 
