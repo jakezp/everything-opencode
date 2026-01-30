@@ -1,3 +1,5 @@
+import { toast } from '../../utils/toast';
+
 /**
  * Pre-tool-use hooks
  * Executed before tool use to provide warnings and validation
@@ -84,14 +86,10 @@ export function createPreToolUseHooks(config?: PreToolUseConfig) {
     ];
 
     if (bashCommandMatches(command, devCommandPatterns) && !isInsideTmux()) {
-      console.error(
-        `[Hook] WARNING: Running development/build command outside tmux: ${command}`,
-      );
-      console.error(
-        '[Hook] Consider running this inside a tmux session for better isolation',
-      );
-      console.error(
-        '[Hook] Suggestion: tmux new-session -d -s work && tmux send-keys -t work "cd <project> && <command>" Enter',
+      toast.error(
+        'Tmux Recommendation',
+        `Running development command outside tmux: ${command}. Consider using a tmux session for isolation.`,
+        5000,
       );
     }
   }
@@ -163,10 +161,11 @@ export function createPreToolUseHooks(config?: PreToolUseConfig) {
     if (!command) return;
 
     if (bashCommandMatches(command, ['^git\\s+push'])) {
-      console.error('[Hook] REMINDER: Review your changes before pushing:');
-      console.error('[Hook]   git diff HEAD');
-      console.error('[Hook]   git log --oneline -5');
-      console.error('[Hook]   git status');
+      toast.info(
+        'Git Push Reminder',
+        'Review your changes before pushing. Run: git diff HEAD && git status',
+        5000,
+      );
     }
   }
 
