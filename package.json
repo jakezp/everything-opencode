@@ -40,10 +40,14 @@
     "claude-code",
     "ai-coding"
   ],
-  "author": "",
+  "author": "JakezP",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
-  }
+    "url": "git+https://github.com/jakezp/everything-opencode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jakezp/everything-opencode/issues"
+  },
+  "homepage": "https://github.com/jakezp/everything-opencode#readme"
 }
