@@ -14,132 +14,142 @@ import type { Preset } from './schema';
 
 // Anthropic direct API (pure - all anthropic models)
 export const PRESET_ANTHROPIC: Preset = {
-  orchestrator: { model: 'anthropic/claude-opus-4-5-20251101' },
-  planner: { model: 'anthropic/claude-sonnet-4-5-20250929' },
-  architect: { model: 'anthropic/claude-opus-4-5-20251101' },
-  fixer: { model: 'anthropic/claude-sonnet-4-5-20250929' },
-  'tdd-guide': { model: 'anthropic/claude-sonnet-4-5-20250929' },
-  'code-reviewer': { model: 'anthropic/claude-sonnet-4-5-20250929' },
-  'security-reviewer': { model: 'anthropic/claude-opus-4-5-20251101' },
-  'build-error-resolver': { model: 'anthropic/claude-sonnet-4-5-20250929' },
-  'e2e-runner': { model: 'anthropic/claude-sonnet-4-5-20250929' },
-  'refactor-cleaner': { model: 'anthropic/claude-sonnet-4-5-20250929' },
-  'doc-updater': { model: 'anthropic/claude-haiku-4-5-20251001' },
-  'database-reviewer': { model: 'anthropic/claude-sonnet-4-5-20250929' },
-  'go-reviewer': { model: 'anthropic/claude-sonnet-4-5-20250929' },
-  'go-build-resolver': { model: 'anthropic/claude-sonnet-4-5-20250929' },
-  designer: { model: 'anthropic/claude-sonnet-4-5-20250929' },
-  'multimodal-looker': { model: 'anthropic/claude-sonnet-4-5-20250929' },
+  'EO-orchestrator': { model: 'anthropic/claude-opus-4-5-20251101' },
+  'EO-planner': { model: 'anthropic/claude-sonnet-4-5-20250929' },
+  'EO-architect': { model: 'anthropic/claude-opus-4-5-20251101' },
+  'EO-fixer': { model: 'anthropic/claude-sonnet-4-5-20250929' },
+  'EO-tdd-guide': { model: 'anthropic/claude-sonnet-4-5-20250929' },
+  'EO-code-reviewer': { model: 'anthropic/claude-sonnet-4-5-20250929' },
+  'EO-security-reviewer': { model: 'anthropic/claude-opus-4-5-20251101' },
+  'EO-build-error-resolver': {
+    model: 'anthropic/claude-sonnet-4-5-20250929',
+  },
+  'EO-e2e-runner': { model: 'anthropic/claude-sonnet-4-5-20250929' },
+  'EO-refactor-cleaner': { model: 'anthropic/claude-sonnet-4-5-20250929' },
+  'EO-doc-updater': { model: 'anthropic/claude-haiku-4-5-20251001' },
+  'EO-database-reviewer': {
+    model: 'anthropic/claude-sonnet-4-5-20250929',
+  },
+  'EO-go-reviewer': { model: 'anthropic/claude-sonnet-4-5-20250929' },
+  'EO-go-build-resolver': {
+    model: 'anthropic/claude-sonnet-4-5-20250929',
+  },
+  'EO-designer': { model: 'anthropic/claude-sonnet-4-5-20250929' },
+  'EO-multimodal-looker': {
+    model: 'anthropic/claude-sonnet-4-5-20250929',
+  },
 };
 
 // AWS Bedrock (pure - all bedrock models)
 export const PRESET_BEDROCK: Preset = {
-  orchestrator: {
+  'EO-orchestrator': {
     model: 'amazon-bedrock/anthropic.claude-opus-4-5-20251101-v1:0',
   },
-  planner: {
+  'EO-planner': {
     model: 'amazon-bedrock/anthropic.claude-sonnet-4-5-20250929-v1:0',
   },
-  architect: {
+  'EO-architect': {
     model: 'amazon-bedrock/anthropic.claude-opus-4-5-20251101-v1:0',
   },
-  fixer: { model: 'amazon-bedrock/anthropic.claude-sonnet-4-5-20250929-v1:0' },
-  'tdd-guide': {
+  'EO-fixer': {
     model: 'amazon-bedrock/anthropic.claude-sonnet-4-5-20250929-v1:0',
   },
-  'code-reviewer': {
+  'EO-tdd-guide': {
     model: 'amazon-bedrock/anthropic.claude-sonnet-4-5-20250929-v1:0',
   },
-  'security-reviewer': {
+  'EO-code-reviewer': {
+    model: 'amazon-bedrock/anthropic.claude-sonnet-4-5-20250929-v1:0',
+  },
+  'EO-security-reviewer': {
     model: 'amazon-bedrock/anthropic.claude-opus-4-5-20251101-v1:0',
   },
-  'build-error-resolver': {
+  'EO-build-error-resolver': {
     model: 'amazon-bedrock/anthropic.claude-sonnet-4-5-20250929-v1:0',
   },
-  'e2e-runner': {
+  'EO-e2e-runner': {
     model: 'amazon-bedrock/anthropic.claude-sonnet-4-5-20250929-v1:0',
   },
-  'refactor-cleaner': {
+  'EO-refactor-cleaner': {
     model: 'amazon-bedrock/anthropic.claude-sonnet-4-5-20250929-v1:0',
   },
-  'doc-updater': {
+  'EO-doc-updater': {
     model: 'amazon-bedrock/anthropic.claude-haiku-4-5-20251001-v1:0',
   },
-  'database-reviewer': {
+  'EO-database-reviewer': {
     model: 'amazon-bedrock/anthropic.claude-sonnet-4-5-20250929-v1:0',
   },
-  'go-reviewer': {
+  'EO-go-reviewer': {
     model: 'amazon-bedrock/anthropic.claude-sonnet-4-5-20250929-v1:0',
   },
-  'go-build-resolver': {
+  'EO-go-build-resolver': {
     model: 'amazon-bedrock/anthropic.claude-sonnet-4-5-20250929-v1:0',
   },
-  designer: {
+  'EO-designer': {
     model: 'amazon-bedrock/anthropic.claude-sonnet-4-5-20250929-v1:0',
   },
-  'multimodal-looker': {
+  'EO-multimodal-looker': {
     model: 'amazon-bedrock/anthropic.claude-sonnet-4-5-20250929-v1:0',
   },
 };
 
 // GitHub Copilot (pure - all github-copilot models)
 export const PRESET_GITHUB_COPILOT: Preset = {
-  orchestrator: { model: 'github-copilot/claude-opus-4.5' },
-  planner: { model: 'github-copilot/claude-sonnet-4.5' },
-  architect: { model: 'github-copilot/claude-opus-4.5' },
-  fixer: { model: 'github-copilot/claude-sonnet-4.5' },
-  'tdd-guide': { model: 'github-copilot/claude-sonnet-4.5' },
-  'code-reviewer': { model: 'github-copilot/claude-sonnet-4.5' },
-  'security-reviewer': { model: 'github-copilot/claude-opus-4.5' },
-  'build-error-resolver': { model: 'github-copilot/claude-sonnet-4.5' },
-  'e2e-runner': { model: 'github-copilot/claude-sonnet-4.5' },
-  'refactor-cleaner': { model: 'github-copilot/claude-sonnet-4.5' },
-  'doc-updater': { model: 'github-copilot/claude-haiku-4.5' },
-  'database-reviewer': { model: 'github-copilot/claude-sonnet-4.5' },
-  'go-reviewer': { model: 'github-copilot/claude-sonnet-4.5' },
-  'go-build-resolver': { model: 'github-copilot/claude-sonnet-4.5' },
-  designer: { model: 'github-copilot/claude-sonnet-4.5' },
-  'multimodal-looker': { model: 'github-copilot/claude-sonnet-4.5' },
+  'EO-orchestrator': { model: 'github-copilot/claude-opus-4.5' },
+  'EO-planner': { model: 'github-copilot/claude-sonnet-4.5' },
+  'EO-architect': { model: 'github-copilot/claude-opus-4.5' },
+  'EO-fixer': { model: 'github-copilot/claude-sonnet-4.5' },
+  'EO-tdd-guide': { model: 'github-copilot/claude-sonnet-4.5' },
+  'EO-code-reviewer': { model: 'github-copilot/claude-sonnet-4.5' },
+  'EO-security-reviewer': { model: 'github-copilot/claude-opus-4.5' },
+  'EO-build-error-resolver': { model: 'github-copilot/claude-sonnet-4.5' },
+  'EO-e2e-runner': { model: 'github-copilot/claude-sonnet-4.5' },
+  'EO-refactor-cleaner': { model: 'github-copilot/claude-sonnet-4.5' },
+  'EO-doc-updater': { model: 'github-copilot/claude-haiku-4.5' },
+  'EO-database-reviewer': { model: 'github-copilot/claude-sonnet-4.5' },
+  'EO-go-reviewer': { model: 'github-copilot/claude-sonnet-4.5' },
+  'EO-go-build-resolver': { model: 'github-copilot/claude-sonnet-4.5' },
+  'EO-designer': { model: 'github-copilot/claude-sonnet-4.5' },
+  'EO-multimodal-looker': { model: 'github-copilot/claude-sonnet-4.5' },
 };
 
 // OpenAI (pure - all openai models)
 export const PRESET_OPENAI: Preset = {
-  orchestrator: { model: 'openai/o3' },
-  planner: { model: 'openai/gpt-4o' },
-  architect: { model: 'openai/o3' },
-  fixer: { model: 'openai/gpt-4o' },
-  'tdd-guide': { model: 'openai/gpt-4o' },
-  'code-reviewer': { model: 'openai/gpt-4o' },
-  'security-reviewer': { model: 'openai/o3' },
-  'build-error-resolver': { model: 'openai/gpt-4o' },
-  'e2e-runner': { model: 'openai/gpt-4o' },
-  'refactor-cleaner': { model: 'openai/gpt-4o' },
-  'doc-updater': { model: 'openai/gpt-4o-mini' },
-  'database-reviewer': { model: 'openai/gpt-4o' },
-  'go-reviewer': { model: 'openai/gpt-4o' },
-  'go-build-resolver': { model: 'openai/gpt-4o' },
-  designer: { model: 'openai/gpt-4o' },
-  'multimodal-looker': { model: 'openai/gpt-4o' },
+  'EO-orchestrator': { model: 'openai/o3' },
+  'EO-planner': { model: 'openai/gpt-4o' },
+  'EO-architect': { model: 'openai/o3' },
+  'EO-fixer': { model: 'openai/gpt-4o' },
+  'EO-tdd-guide': { model: 'openai/gpt-4o' },
+  'EO-code-reviewer': { model: 'openai/gpt-4o' },
+  'EO-security-reviewer': { model: 'openai/o3' },
+  'EO-build-error-resolver': { model: 'openai/gpt-4o' },
+  'EO-e2e-runner': { model: 'openai/gpt-4o' },
+  'EO-refactor-cleaner': { model: 'openai/gpt-4o' },
+  'EO-doc-updater': { model: 'openai/gpt-4o-mini' },
+  'EO-database-reviewer': { model: 'openai/gpt-4o' },
+  'EO-go-reviewer': { model: 'openai/gpt-4o' },
+  'EO-go-build-resolver': { model: 'openai/gpt-4o' },
+  'EO-designer': { model: 'openai/gpt-4o' },
+  'EO-multimodal-looker': { model: 'openai/gpt-4o' },
 };
 
 // Google (pure - all google models)
 export const PRESET_GOOGLE: Preset = {
-  orchestrator: { model: 'google/gemini-3-pro-high' },
-  planner: { model: 'google/gemini-3-pro-high' },
-  architect: { model: 'google/gemini-3-pro-high' },
-  fixer: { model: 'google/gemini-3-flash' },
-  'tdd-guide': { model: 'google/gemini-3-pro-high' },
-  'code-reviewer': { model: 'google/gemini-3-pro-high' },
-  'security-reviewer': { model: 'google/gemini-3-pro-high' },
-  'build-error-resolver': { model: 'google/gemini-3-flash' },
-  'e2e-runner': { model: 'google/gemini-3-flash' },
-  'refactor-cleaner': { model: 'google/gemini-3-flash' },
-  'doc-updater': { model: 'google/gemini-3-flash' },
-  'database-reviewer': { model: 'google/gemini-3-pro-high' },
-  'go-reviewer': { model: 'google/gemini-3-pro-high' },
-  'go-build-resolver': { model: 'google/gemini-3-flash' },
-  designer: { model: 'google/gemini-3-pro-high' },
-  'multimodal-looker': { model: 'google/gemini-3-flash' },
+  'EO-orchestrator': { model: 'google/gemini-3-pro-high' },
+  'EO-planner': { model: 'google/gemini-3-pro-high' },
+  'EO-architect': { model: 'google/gemini-3-pro-high' },
+  'EO-fixer': { model: 'google/gemini-3-flash' },
+  'EO-tdd-guide': { model: 'google/gemini-3-pro-high' },
+  'EO-code-reviewer': { model: 'google/gemini-3-pro-high' },
+  'EO-security-reviewer': { model: 'google/gemini-3-pro-high' },
+  'EO-build-error-resolver': { model: 'google/gemini-3-flash' },
+  'EO-e2e-runner': { model: 'google/gemini-3-flash' },
+  'EO-refactor-cleaner': { model: 'google/gemini-3-flash' },
+  'EO-doc-updater': { model: 'google/gemini-3-flash' },
+  'EO-database-reviewer': { model: 'google/gemini-3-pro-high' },
+  'EO-go-reviewer': { model: 'google/gemini-3-pro-high' },
+  'EO-go-build-resolver': { model: 'google/gemini-3-flash' },
+  'EO-designer': { model: 'google/gemini-3-pro-high' },
+  'EO-multimodal-looker': { model: 'google/gemini-3-flash' },
 };
 
 // All built-in presets
