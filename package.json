@@ -8,14 +8,7 @@
   "bin": {
     "everything-opencode": "./dist/cli/index.js"
   },
-  "files": [
-    "dist",
-    "agents",
-    "commands",
-    "skills",
-    "rules",
-    "contexts"
-  ],
+  "files": ["dist", "agents", "commands", "skills", "rules", "contexts"],
   "scripts": {
     "build": "bun build src/index.ts --outdir dist --target bun --format esm && bun build src/cli/index.ts --outdir dist/cli --target bun --format esm && tsc --emitDeclarationOnly",
     "typecheck": "tsc --noEmit",
